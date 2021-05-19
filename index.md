@@ -5,11 +5,16 @@ The goal of entity matching in knowledge graphs is to identify sets of entities 
 ## Overview
 ![flow](/img/eswc2021-flow2.png)
 
-## Distribution of clusters in data
+## Generate random clusters with different sizes
 ![cluster distributions](/img/cluster_size_distribution.jpg)
 
-## F-0.5 Score
-![f-0.5 score](/img/partial-ordered-5.50.lr.cos.100.fscore.jpg)
+## Improve F-0.5 score over a range of cutoff values
+Feature: Cosine Similarity | Features: Hadamard Product
+:---: | :---:
+![f-0.5 score](/img/partial-ordered-5.50.lr.cos.100.fscore.jpg) | ![f-0.5 score](/img/partial-ordered-5.10.lr.had.300.fscore.jpg)
+**Logistic Regression** | **Logistic Regression**
+![f-0.5 score](/img/partial-ordered-5.10.svm.cos.100.fscore.jpg) | ![f-0.5 score](/img/partial-ordered-5.25.svm.had.300.fscore.jpg)
+**SVM** | **SVM**
 
 ## Precision
 ![precision](/img/partial-ordered-5.50.lr.cos.100.precision.jpg)
