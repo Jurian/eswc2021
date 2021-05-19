@@ -1,37 +1,19 @@
-## Welcome to GitHub Pages
+# Exploiting Transitivity for Entity Matching
 
-You can use the [editor on GitHub](https://github.com/Jurian/eswc2021/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+The goal of entity matching in knowledge graphs is to identify sets of entities that refer to the same real-world object. Methods for entity matching in knowledge graphs, however, produce a collection of pairs of entities claimed to be duplicates. This collection that represents the sameAs relation may fail to satisfy some of its structural properties such as transitivity. We show that an ad-hoc enforcement of transitivity on the set of identified entity pairs may decrease precision. We therefore propose a methodology that starts with a given similarity measure, generates a set of entity pairs, and applies cluster editing to enforce transitivity, leading to overall improved performance.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Overview
+![flow](/img/eswc2021-flow2.png)
 
-### Markdown
+## Distribution of clusters in data
+![cluster distributions](/img/cluster_size_distribution.jpg)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## F-0.5 Score
+![f-0.5 score](/img/partial-ordered-5.50.lr.cos.100.fscore.jpg)
 
-```markdown
-Syntax highlighted code block
+## Precision
+![precision](/img/partial-ordered-5.50.lr.cos.100.precision.jpg)
 
-# Header 1
-## Header 2
-### Header 3
+## Linkset Size
+![linkset size](/img/partial-ordered-5.50.lr.cos.100.size.jpg)
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Jurian/eswc2021/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
