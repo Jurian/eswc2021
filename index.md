@@ -23,6 +23,7 @@ Then we introduce duplicates by uniformly sampling a percentage of entities and 
 ![cluster distributions](/img/cluster_size_distribution.jpg)
 
 ## Improve F-0.5 score over a range of cutoff values
+By using a range of cosine similarity cutoff values, we can generate connected components of different sizes. These components are then either treated as clusters themselves (transitive closure), or split up using cluster editing. The resulting (sub)clusters are then treated as referring to a single real-life entity. 
 Feature: Cosine Similarity | Features: Hadamard Product
 :---: | :---:
 ![f-0.5 score](/img/partial-ordered-5.50.lr.cos.100.fscore.jpg) | ![f-0.5 score](/img/partial-ordered-5.10.lr.had.300.fscore.jpg)
@@ -30,8 +31,3 @@ Feature: Cosine Similarity | Features: Hadamard Product
 ![f-0.5 score](/img/partial-ordered-5.10.svm.cos.100.fscore.jpg) | ![f-0.5 score](/img/partial-ordered-5.25.svm.had.300.fscore.jpg)
 **SVM** | **SVM**
 
-## The transitive closure method overestimates the number of duplicate pairs
-Feature: Cosine Similarity | Feature: Cosine Similarity
-:---: | :---:
-![linkset size](/img/partial-ordered-5.50.lr.cos.100.size.jpg) | ![linkset size](/img/partial-ordered-5.25.svm.cos.100.size.jpg)
-**Logistic Regression** | **SVM**
