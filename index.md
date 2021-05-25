@@ -24,6 +24,7 @@ Then we introduce duplicates by uniformly sampling a percentage of entities and 
 
 ## Improve F-0.5 score over a range of cutoff values
 By using a range of cosine similarity cutoff values, we can generate connected components of different sizes. These components are then either treated as clusters themselves (transitive closure), or split up using cluster editing. The resulting (sub)clusters are then treated as referring to a single real-life entity. 
+
 Feature: Cosine Similarity | Features: Hadamard Product
 :---: | :---:
 ![f-0.5 score](/img/partial-ordered-5.50.lr.cos.100.fscore.jpg) | ![f-0.5 score](/img/partial-ordered-5.10.lr.had.300.fscore.jpg)
